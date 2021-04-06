@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>agst</Title>
+			<Shortcut>agst</Shortcut>
+			<Description>acdbHostApplicationServices()->workingDatabase()->getSymbolTable(pTbl, AcDb::kForWrite) 语句的代码片段</Description>
+			<Author>Xsx</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>PTableType</ID>
+					<ToolTip>符号表类型</ToolTip>
+					<Default>AcDbLayerTable</Default>
+				</Literal>
+				<Literal>
+					<ID>PTable</ID>
+					<ToolTip>符号表指针</ToolTip>
+					<Default>pTable</Default>
+				</Literal>
+				<Literal>
+					<ID>Mode</ID>
+					<ToolTip>读取模式</ToolTip>
+					<Default>AcDb::kForWrite</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="cpp"><![CDATA[
+			$PTableType$* $PTable$;
+			acdbHostApplicationServices()->workingDatabase()->getSymbolTable($PTable$, $Mode$);$end$]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>
